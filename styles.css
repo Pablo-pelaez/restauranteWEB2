@@ -78,7 +78,7 @@
 }
 
 .about p{
-    padding-top: 20px;
+    padding-top: 30px;
     text-align: justify;
 }
 
@@ -190,5 +190,10 @@
     font-weight: 500;
     text-decoration: none;
     color: #3498db;
+}
+
+.phrases{
+    text-align: center;
+    size: 90px;
 }
 

@@ -34,18 +34,10 @@
   <div class="about">
     <div class="content">
       <div class="title">
-        Responsive Sticky Navigation Bar On Scroll Using HTML CSS & JavaScript
+        BIENVENIDOS AL DELL'SON RISTORANTE 
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sapiente
-        recusandae reprehenderit tempora est! Voluptates quaerat iste eius
-        nisi minima repudiandae. Delectus doloremque ratione sint eum
-        mollitia, pariatur esse unde quibusdam atque commodi impedit voluptas,
-        ipsam nesciunt natus. Iure aliquam eos libero dignissimos animi,
-        debitis repudiandae expedita possimus nemo odio laudantium quo modi
-        quas fuga, non, eum voluptatum amet pariatur ducimus recusandae
-        laboriosam? Consectetur odio omnis odit placeat temporibus. Aut
-        debitis minima accusantium beatae distinctio, aliquam amet!
+        Aquí encontrarás comida Mexicana, Italiana, Colombiana y muchas más culturas que te hará la boca agua!
       </p>
     
     </div>
@@ -72,7 +64,7 @@
         </div>
         
         <div class="card">
-            <img src="img/img3.jpg">
+            <img src="../ImagenesRestaurante/sandwich.jpg">
             <h4>Tecnología</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
             <a href="#">Leer más</a>
