@@ -12,16 +12,16 @@
 <body>
   <nav class="navbar">
     <div class="content">
-      <div class="logo"><a href="#">Dell'Son Ristorante</a></div>
+      <div class="logo"><a href="index.php">Dell'Son Ristorante</a></div>
       <ul class="menu-list">
         <div class="icon cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Menú</a></li>
+        <li><a class="active" href="index.php">Inicio</a></li>
+        <li><a href="menu.php">Menú</a></li>
         <li><a href="#">Bodega</a></li>
-        <li><a href="login/views/login.view.php">Iniciar Sesión</a></li>
-        <li><a href="#">Registrarse</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Contáctenos</a></li>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -36,15 +36,7 @@
         BIENVENIDOS A DELL'SON RISTORANTE
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sapiente
-        recusandae reprehenderit tempora est! Voluptates quaerat iste eius
-        nisi minima repudiandae. Delectus doloremque ratione sint eum
-        mollitia, pariatur esse unde quibusdam atque commodi impedit voluptas,
-        ipsam nesciunt natus. Iure aliquam eos libero dignissimos animi,
-        debitis repudiandae expedita possimus nemo odio laudantium quo modi
-        quas fuga, non, eum voluptatum amet pariatur ducimus recusandae
-        laboriosam? Consectetur odio omnis odit placeat temporibus. Aut
-        debitis minima accusantium beatae distinctio, aliquam amet!
+      Mission statements are often paired with company values and/or a vision. Together, a mission, vision, and values describe what your restaurant stands for. In other words, they collectively serve as a compass for your business, guiding you towards your north star – the goals that you hope to achieve through your restaurant.
       </p>
     
     </div>
@@ -57,21 +49,21 @@
     <div class="container">
        
         <div class="card">
-            <img src="../ImagenesRestaurante/pasta.jpg">
+            <img src="../../../ImagenesRestaurante/pasta.jpg">
             <h4>Pasta Italiana</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
             <a href="#">Ver más platos</a>
         </div>
         
         <div class="card">
-            <img src="../ImagenesRestaurante/tacos.jpg">
+            <img src="../../../ImagenesRestaurante/tacos.jpg">
             <h4>Tacos</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
             <a href="#">Ver más platos</a>
         </div>
         
         <div class="card">
-            <img src="../ImagenesRestaurante/sandwich.jpg">
+            <img src="../../../ImagenesRestaurante/sandwich.jpg">
             <h4>Sánduches</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
             <a href="#">Ver más platos</a>
@@ -81,7 +73,28 @@
   
   <!-- --------------------------------------------------------------------------- -->
 
-  <script src="script.js"></script>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabledScroll");
+    };
+    cancelBtn.onclick = () => {
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      body.classList.remove("disabledScroll");
+    };
+
+    window.onscroll = () => {
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
+    }
+  </script>
 </body>
 
 </html>
