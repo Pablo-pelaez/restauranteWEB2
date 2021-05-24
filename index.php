@@ -19,7 +19,7 @@
         </div>
         <li><a class="active" href="index.php">Inicio</a></li>
         <li><a href="menu.php">Menú</a></li>
-        <li><a href="#">Bodega</a></li>
+        <li><a href="bodega.php">Bodega</a></li>
         <li><a href="#">Sobre Nosotros</a></li>
         <li><a href="#">Contáctenos</a></li>
       </ul>

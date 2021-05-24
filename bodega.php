@@ -22,8 +22,8 @@ $data = json_decode(file_get_contents('http://localhost/APIRestauranteWEB2/consu
                 <div class="icon cancel-btn">
                     <i class="fas fa-times"></i>
                 </div>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a class="active" href="menu.php">Menú</a></li>
+                <li><a class="active" href="index.php">Inicio</a></li>
+                <li><a href="menu.php">Menú</a></li>
                 <li><a href="bodega.php">Bodega</a></li>
                 <li><a href="#">Sobre Nosotros</a></li>
                 <li><a href="#">Contáctenos</a></li>
@@ -34,40 +34,41 @@ $data = json_decode(file_get_contents('http://localhost/APIRestauranteWEB2/consu
         </div>
     </nav>
 
-    <div class="banner2"></div>
+    <div class="banner3"></div>
     <div class="about">
         <div class="content">
             <div class="title">
                 BIENVENIDOS A DELL'SON RISTORANTE
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sapiente
-                recusandae reprehenderit tempora est! Voluptates quaerat iste eius
-                nisi minima repudiandae. Delectus doloremque ratione sint eum
-                mollitia, pariatur esse unde quibusdam atque commodi impedit voluptas,
-                ipsam nesciunt natus. Iure aliquam eos libero dignissimos animi,
-                debitis repudiandae expedita possimus nemo odio laudantium quo modi
-                quas fuga, non, eum voluptatum amet pariatur ducimus recusandae
-                laboriosam? Consectetur odio omnis odit placeat temporibus. Aut
-                debitis minima accusantium beatae distinctio, aliquam amet!
+                Mission statements are often paired with company values and/or a vision. Together, a mission, vision, and values describe what your restaurant stands for. In other words, they collectively serve as a compass for your business, guiding you towards your north star – the goals that you hope to achieve through your restaurant.
             </p>
 
         </div>
     </div>
 
-    <!-- ------------------------------------------------------------------------------------- -->
+    <!------------------------------------------------------------------------------ -->
+    <div class="btcontainer">
+        <a href="crearPlato.php" class="boton">CREAR NUEVO PLATO</a>
+    </div>
 
-    <h1 class="title"> Menú de Comida</h1>
-    <h2 class="title">CULTURA CHINA</h2>
+
     <div class="container">
 
+    <?php foreach ($data['body'] as $row) : ?>
+    
         <div class="card">
-            <img src="../ImagenesRestaurante/dimsum.jpg">
-            <h4>Dim Sum</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
-            <a href="#">$15.000</a>
+            <img src="<?php echo ($row["imagen"]) ?>">
+            <h4><?php echo ($row["nombrePlato"]) ?></h4>
+            <p><?php echo ($row["descripcion"]) ?></p>
+            <div><a href="#"><?php echo ($row["precio"]) ?></a></div>
+            <div><a href="buscarPlato.php">Consultar Plato</a></div>
+            <div><a href="editarPlato.php">Editar Plato</a></div>
+            <div><a href="eliminarPlato.php">eliminar Plato</a></div>
         </div>
 
+    <?php endforeach ?>
+        <!--
         <div class="card">
             <img src="../ImagenesRestaurante/dumplings.jpg">
             <h4>Dumpling</h4>
@@ -82,12 +83,7 @@ $data = json_decode(file_get_contents('http://localhost/APIRestauranteWEB2/consu
             <a href="#">$18.000</a>
         </div>
 
-    </div>
-
-    <!-- ------------------------------------------------------------------------- -->
-
-    <h2 class="title">CULTURA MEXICANA</h2>
-    <div class="container">
+        <div class="container">
 
         <div class="card">
             <img src="../ImagenesRestaurante/tacos.jpg">
@@ -110,12 +106,6 @@ $data = json_decode(file_get_contents('http://localhost/APIRestauranteWEB2/consu
             <a href="#">$18.000</a>
         </div>
 
-    </div>
-
-    <!-- --------------------------------------------------------------------- -->
-
-    <h2 class="title">CULTURA COLOMBIANA</h2>
-    <div class="container">
         <div class="card">
             <img src="../ImagenesRestaurante/sancocho.jpg">
             <h4>Sancocho</h4>
@@ -137,12 +127,6 @@ $data = json_decode(file_get_contents('http://localhost/APIRestauranteWEB2/consu
             <a href="#">$9.000</a>
         </div>
 
-    </div>
-
-    <!-- --------------------------------------------------------------------------- -->
-
-    <h2 class="title">CULTURA ITALIANA</h2>
-    <div class="container">
         <div class="card">
             <img src="../ImagenesRestaurante/pasta.jpg">
             <h4>Pasta</h4>
@@ -162,27 +146,12 @@ $data = json_decode(file_get_contents('http://localhost/APIRestauranteWEB2/consu
             <h4>Pizza</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
             <a href="#">$29.000</a>
-        </div>
+        </div> -->
 
-
-
-
-        <?php foreach ($data['body'] as $row) : ?>
-    
-    <div class="card">
-        <img src="<?php echo ($row["imagen"]) ?>">
-        <h4><?php echo ($row["nombrePlato"]) ?></h4>
-        <p><?php echo ($row["descripcion"]) ?></p>
-        <div><a href="#"><?php echo ($row["precio"]) ?></a></div>
     </div>
-
-<?php endforeach ?>
-    </div>
-
 
     <!-- --------------------------------------------------------------------------- -->
 
-    
 
     <script>
         const body = document.querySelector("body");

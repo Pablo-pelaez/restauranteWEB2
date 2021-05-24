@@ -68,6 +68,22 @@
     background-attachment: fixed;
 }
 
+.banner2{
+    height: 100vh;
+    background: url(../../../ImagenesRestaurante/fondo2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.banner3{
+    height: 100vh;
+    background: url(../../../ImagenesRestaurante/fondo3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .about{
     padding: 40px 0;
 }
@@ -206,4 +222,23 @@
     text-align: center;
     size: 90px;
 }
+
+.btcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.boton{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    text-align: center;
+  }
 

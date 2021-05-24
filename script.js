@@ -17,3 +17,12 @@ const body = document.querySelector("body");
     window.onscroll = () => {
       this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky")
     }
+    
+
+    function limpiarCampos(){
+      document.getElementById("idPlato").value = ''
+      document.getElementById("nombrePlato").value = ''
+      document.getElementById("descripcion").value = ''
+      document.getElementById("precio").value = ''
+      document.getElementById("imagen").value = ''
+  }
